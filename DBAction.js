@@ -2,7 +2,7 @@
 
 
 /** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! **/
-/** version 2021-04-15 **/
+/** version 2021-04-16 **/
 /** If you have the latest version, please update it **/
 
 let SqlString = require('sqlstring');
@@ -78,7 +78,7 @@ async function  save(database,entity){
       replacements:valueArr,
       type:entity.id?self.QueryTypes.UPDATE:self.QueryTypes.INSERT
     }).then((result) => {
-      resolve(entity.id?result:result[0]);
+      resolve(entity.id?entity.id:result[0]);
     }).catch((err)=>{
       //  console.error(err);
       reject(err);
