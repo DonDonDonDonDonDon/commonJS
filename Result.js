@@ -2,7 +2,7 @@
 
 
 /** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! **/
-/** version 2021-05-10 **/
+/** version 2021-05-16 **/
 /** Reference address  https://github.com/DonDonDonDonDonDon/commonJS/blob/main/Result.js  **/
 /** If you have the latest version, please update it **/
 
@@ -16,6 +16,7 @@ class Result{
     this.typeCode = 1;
     this.msg = "no msg";
     this.data = null;
+    this.total = 0;
   }
   setTypeCode(typeCode){
     this.typeCode = typeCode;
@@ -39,6 +40,15 @@ class Result{
     this.data = data;
     return this;
 
+  }
+
+  setTotal(total){
+    this.total = total;
+    return this;
+  }
+
+  getTotal(){
+    return this.total;
   }
   getData(){
     return this.data;
