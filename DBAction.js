@@ -2,7 +2,7 @@
 
 
 /** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! **/
-/** version 2021-04-16 **/
+/** version 2021-05-16 **/
 /** If you have the latest version, please update it **/
 
 let SqlString = require('sqlstring');
