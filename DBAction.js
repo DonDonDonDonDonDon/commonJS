@@ -1,22 +1,27 @@
+/**
+ * 现在已经用submodule，并且是对象来解决这个问题，所以，这个工程就废了
+ */
+
+/*
 'use strict'
 
 
-/** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! **/
+/!** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! **!/
 <<<<<<< HEAD
-/** version 2021-05-16 **/
+/!** version 2021-05-16 **!/
 =======
-/** version 2021-05-21 **/
+/!** version 2021-05-21 **!/
 >>>>>>> f9731b24421048b0868b9f7e258b5ff81cfdf260
-/** If you have the latest version, please update it **/
+/!** If you have the latest version, please update it **!/
 
 let SqlString = require('sqlstring');
 
-/**
+/!**
  *  if the entity have id do insert,else do update
  * @param database
  * @param entity
  * @returns {Promise<unknown>}
- */
+ *!/
 async function save(database, entity) {
   let sql = "";
   let keyArr = [];
@@ -55,7 +60,7 @@ async function save(database, entity) {
   keyStr = keyArr.join(',');
 
   if (entity.id) {
-    /*update*/
+    /!*update*!/
     const setSqlArr = [];
     for (let i = 0; i < keyArr.length; i++) {
       console.log("valueArr[i]", valueArr[i])
@@ -66,7 +71,7 @@ async function save(database, entity) {
 
     sql = "update " + database + " set " + setSql + " where id = " + entity.id;
   } else {
-    /*insert*/
+    /!*insert*!/
     const questionMarkArr = [];
 
     for (let i = 0; i < valueArr.length; i++) {
@@ -97,12 +102,12 @@ async function save(database, entity) {
   })
 }
 
-/**
+/!**
  *  just do insert sql
  * @param database
  * @param entity
  * @returns {Promise<unknown>}
- */
+ *!/
 <<<<<<< HEAD
 async function  insert(sql,filterArr){
 =======
@@ -132,12 +137,12 @@ async function insert(sql, filterArr) {
 }
 
 
-/**
+/!**
 <<<<<<< HEAD
 =======
  * @param sql
  * @returns {Promise<unknown>}
- */
+ *!/
 async function findDataById(database, id) {
 
   const start = (new Date()).valueOf();
@@ -163,11 +168,11 @@ async function findDataById(database, id) {
   })
 }
 
-/**
+/!**
 >>>>>>> f9731b24421048b0868b9f7e258b5ff81cfdf260
  * @param sql
  * @returns {Promise<unknown>}
- */
+ *!/
 async function select(sql, filterArr) {
 
 
@@ -195,10 +200,10 @@ async function select(sql, filterArr) {
   })
 }
 
-/**
+/!**
  * @param sql
  * @returns {Promise<unknown>}
- */
+ *!/
 <<<<<<< HEAD
 async function  getTotal(sql,filterArr){
 
@@ -228,10 +233,10 @@ async function  getTotal(sql,filterArr){
 }
 
 
-/**
+/!**
  * @param sql
  * @returns {Promise<unknown>}
- */
+ *!/
 async function  del(sql,filterArr){
 =======
 async function getTotal(sql, filterArr) {
@@ -263,10 +268,10 @@ async function getTotal(sql, filterArr) {
 }
 
 
-/**
+/!**
  * @param sql
  * @returns {Promise<unknown>}
- */
+ *!/
 async function del(sql, filterArr) {
 
 
@@ -353,3 +358,4 @@ let extend = function (oldEntity, newEntity) {
 
 exports.addActions = addActions;
 
+*/
